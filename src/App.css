@@ -1,3 +1,11 @@
-.App {
-  text-align: center;
+#profileOuter {
+    text-align: center;
+}
+
+.appOuter {
+    text-align: center;
+}
+
+.appOuter button {
+    margin: 40px 0 20px;
 }

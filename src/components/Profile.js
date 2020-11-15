@@ -1,34 +1,21 @@
 import React, { Component } from 'react';
-import { withAuth0, useAuth0 } from '@auth0/auth0-react';
+import { withAuth0 } from '@auth0/auth0-react';
 import { checkUser } from './UserFunctions';
-
+import Today from './Today';
 
 class Profile extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            authId: ''
-        }
+    checkingUser = (user) => {
+        checkUser(user);
     }
 
-    // componentDidMount() {
-    //     const { user } = this.props.auth0;
-    //     console.log(user);
-    // }
-
-    checkingUser(x) {
-        checkUser(x);
-    }
-
-    render() {
+    render () {
         const { user, isAuthenticated } = this.props.auth0;
         return (
             isAuthenticated && (
-                <div id='profileOuter'>
-                    <img src={user.picture}/>
+                <div>
+                    <img alt="" src={user.picture}/>
                     <h1>{user.name}</h1>
-                    <p>{user.email}</p>
-                    <p>{user.sub}</p>
+                    <Today user={user}/>
                     {this.checkingUser(user)}
                 </div>
             )

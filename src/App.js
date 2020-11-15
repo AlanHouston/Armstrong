@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from 'react';
+// add Component if needed
+// import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
-import Home from './components/Home';
-import { useAuth0 } from '@auth0/auth0-react';
+import LoginBtn from './components/LoginBtn';
+import LogoutBtn from './components/LogoutBtn';
+import Profile from './components/Profile';
+// import Today from './components/Today';
+// import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {
   return (
-    <Router>
-        <Home />
-    </Router>
+    <div className='appOuter'>
+        <LoginBtn />
+        <LogoutBtn />
+        <Profile />
+    </div>
   );
 }
 

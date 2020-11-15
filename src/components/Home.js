@@ -3,16 +3,18 @@ import React from 'react';
 import LoginBtn from './LoginBtn';
 import LogoutBtn from './LogoutBtn';
 import Profile from './Profile';
+import Today from './Today';
 
 const Home = () => {
     // const { user, isAuthenticated } = useAuth0();
 
     return (
-        <>
+        <div>
             <LoginBtn />
             <LogoutBtn />
             <Profile />
-        </>
+            <Today />
+        </div>
     )
 }
 
