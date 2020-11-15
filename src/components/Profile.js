@@ -17,7 +17,7 @@ class Profile extends Component {
     // }
 
     checkingUser(x) {
-        // checkUser(x);
+        checkUser(x);
     }
 
     render() {
