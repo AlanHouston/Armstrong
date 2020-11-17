@@ -15,3 +15,29 @@ export const checkUser = user => {
         console.log(err);
     })
 }
+
+export const hasStarted = user => {
+    return axios
+    .post('http://localhost:3001/users/hasStarted', {
+        authId: user.authId
+    })
+    .then(res => {
+        return res.data;
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
+
+export const setUp = authId => {
+    return axios
+    .post('http://localhost:3001/users/setUp', {
+        authId: authId
+    })
+    .then(res => {
+        return res.data;
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}

@@ -6,6 +6,7 @@ import LoginBtn from './components/LoginBtn';
 import LogoutBtn from './components/LogoutBtn';
 import Profile from './components/Profile';
 // import Today from './components/Today';
+// import Today from './components/Today';
 // import { useAuth0 } from '@auth0/auth0-react';
 
 function App() {

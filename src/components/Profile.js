@@ -15,7 +15,7 @@ class Profile extends Component {
                 <div>
                     <img alt="" src={user.picture}/>
                     <h1>{user.name}</h1>
-                    <Today user={user}/>
+                    <Today />
                     {this.checkingUser(user)}
                 </div>
             )
