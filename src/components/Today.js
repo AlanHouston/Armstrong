@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import jwt_decode from 'jwt-decode';
 import { hasStarted } from './UserFunctions';
 import GetStarted from './GetStarted';
+import WhatsNext from './WhatsNext';
 
 class Today extends Component {
     constructor() {
@@ -27,7 +28,7 @@ class Today extends Component {
     // either show 'Get Started' button or whichever workout is nxt in their flow
     render() {
         if (this.state.hasStarted) {
-            this.content = <div>Showing True</div>
+            this.content = <WhatsNext  authId={this.state.authId}/>
         } else (this.content = <GetStarted  authId={this.state.authId}/>)
         return (
             <div>{this.content}</div>
