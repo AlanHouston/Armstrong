@@ -5,6 +5,7 @@ const GetStarted = (props) => {
 
     const settingUp = id => {
         setUp(id);
+        //await then add new userWorkout
     }
 
     return (
